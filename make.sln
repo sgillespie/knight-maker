@@ -1,0 +1,27 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make", "make.csproj", "{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MakeFs", "MakeFs\MakeFs.fsproj", "{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{3CBB12C3-2895-458E-A1E1-BAAC89FD0447}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9899E8-3F49-490A-BE18-BEF5441D9BCF}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
