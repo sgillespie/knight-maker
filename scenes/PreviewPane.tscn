@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/TodoFont.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.592157, 0.443137, 0.290196, 1 )
+border_blend = true
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_unshaded = true
+
+[node name="PanelContainer" type="PanelContainer"]
+margin_right = 339.0
+margin_bottom = 398.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 334.0
+margin_bottom = 393.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 100, 100 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95783 )
+environment = SubResource( 2 )
+current = true
+
+[node name="MeshInstance" type="MeshInstance" parent="ViewportContainer/Viewport"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 187.0
+margin_right = 334.0
+margin_bottom = 211.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TODO[sgillespie]: Mesh Preview"
+align = 1
+valign = 1

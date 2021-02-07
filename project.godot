@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="make"
+run/main_scene="res://scenes/MainUI.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/height=800
 
 [editor_plugins]
 
