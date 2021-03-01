@@ -10,7 +10,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Shared -->
+    <Compile Include="Domain/Character.fs" />
     <Compile Include="Library.fs" />
+    <Compile Include="UiManagerFs.fs" />
+
+    <!-- Main Panel -->
+    <Compile Include="ChoiceUiFs.fs" />
+    <Compile Include="BuildMenuFs.fs" />
+    <Compile Include="WeaponMenuFs.fs" />
+    <Compile Include="ModifierMenuFs.fs" />
+    <Compile Include="HelpPanelFs.fs" />
+    <Compile Include="PlayerPreview3dFs.fs" />
+
+    <!-- Popup Panel -->
+    <Compile Include="PopupLayoutFs.fs" />
+
+    <!-- Root UI -->
     <Compile Include="MainUiFs.fs" />
   </ItemGroup>
 </Project>

@@ -1,20 +1,30 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/kenney-ui-rpg/PNG/panel_brown.png" type="Texture" id=1]
+[ext_resource path="res://assets/ButtonFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://addons/kenney-ui-rpg/PNG/buttonLong_blue.png" type="Texture" id=3]
+[ext_resource path="res://addons/kenney-ui-rpg/PNG/buttonLong_blue_pressed.png" type="Texture" id=4]
+[ext_resource path="res://scripts/HelpPanel.cs" type="Script" id=5]
+[ext_resource path="res://assets/TextFont.tres" type="DynamicFont" id=6]
 
 [node name="HelpPanel" type="MarginContainer"]
 margin_left = 685.0
 margin_right = 1024.0
 margin_bottom = 800.0
 size_flags_horizontal = 3
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+SubmitButton = NodePath("Background/MarginContainer2/VBoxContainer/VBoxContainer/SubmitButton")
+EnemyBuildLabel = NodePath("Background/MarginContainer2/VBoxContainer/VBoxContainer/EnemyBuildLabel")
+HelpLabel = NodePath("Background/MarginContainer2/VBoxContainer/HelpLabel")
 
 [node name="Background" type="NinePatchRect" parent="."]
 margin_right = 339.0
 margin_bottom = 800.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 101.127, 98.5045 )
 patch_margin_left = 9
@@ -22,14 +32,79 @@ patch_margin_top = 11
 patch_margin_right = 12
 patch_margin_bottom = 7
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Background"]
-margin_left = 27.0
-margin_top = 24.0
-margin_right = 307.0
-margin_bottom = 776.0
-text = "Strength Build: Primarily uses strong physical force. Has a powerful attack, but is vulnerable to quicker apponents.
-"
-scroll_active = false
+[node name="MarginContainer2" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer2"]
+margin_right = 299.0
+margin_bottom = 760.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpLabel" type="RichTextLabel" parent="Background/MarginContainer2/VBoxContainer"]
+margin_right = 299.0
+margin_bottom = 370.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 6 )
+text = "Strength Build: Primarily uses strong physical force. Has a powerful attack, but is vulnerable to quicker apponents."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer2/VBoxContainer"]
+margin_top = 390.0
+margin_right = 299.0
+margin_bottom = 760.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyBuildLabel" type="RichTextLabel" parent="Background/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_right = 299.0
+margin_bottom = 317.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 6 )
+text = "Name: Purple Dragon
+Build: Strength
+Weapon: Axe
+Modifier: Lightning"
+
+[node name="SubmitButton" type="TextureButton" parent="Background/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_left = 54.0
+margin_top = 321.0
+margin_right = 244.0
+margin_bottom = 370.0
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Background/MarginContainer2/VBoxContainer/VBoxContainer/SubmitButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.0
+margin_top = -9.5
+margin_right = 47.0
+margin_bottom = 9.5
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0.686275, 1 )
+text = "Go To Battle"
 __meta__ = {
 "_edit_use_anchors_": false
 }

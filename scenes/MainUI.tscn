@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/MainPanelUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/MainUi.cs" type="Script" id=2]
+[ext_resource path="res://scenes/PopupLayout.tscn" type="PackedScene" id=3]
 
 [node name="GUI" type="MarginContainer"]
 anchor_left = 0.5
@@ -11,12 +13,17 @@ margin_left = -512.0
 margin_top = -379.0
 margin_right = 512.0
 margin_bottom = 379.0
+script = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
 }
+PopupContainerPath = NodePath("PopupLayout")
 
 [node name="RootLayout" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1024.0
 margin_bottom = 758.0
+
+[node name="PopupLayout" parent="." instance=ExtResource( 3 )]

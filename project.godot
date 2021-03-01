@@ -14,6 +14,10 @@ config/name="make"
 run/main_scene="res://scenes/MainUI.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+UIManager="*res://scripts/UiManager.cs"
+
 [display]
 
 window/size/height=800

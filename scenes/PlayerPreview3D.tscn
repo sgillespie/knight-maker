@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/blender/knight/knight-strong.glb" type="PackedScene" id=1]
+[ext_resource path="res://assets/Preview3DEnvironment.tres" type="Environment" id=2]
+[ext_resource path="res://scripts/PlayerPreview3D.cs" type="Script" id=3]
+[ext_resource path="res://scenes/KnightStrong.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/KnightSkilled.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/KnightFat.tscn" type="PackedScene" id=6]
+
+[node name="PlayerPreview3D" type="Spatial"]
+script = ExtResource( 3 )
+KnightContainerPath = NodePath("KnightContainer")
+StrengthKnightScene = ExtResource( 4 )
+VitalityKnightScene = ExtResource( 6 )
+SkillKnightScene = ExtResource( 5 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0654702, 1.08776, 1.74716 )
+environment = ExtResource( 2 )
+
+[node name="KnightContainer" type="Spatial" parent="."]
+
+[node name="knight-strong" parent="KnightContainer" instance=ExtResource( 1 )]
+visible = false
